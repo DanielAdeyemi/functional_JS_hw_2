@@ -20,9 +20,9 @@ const changePlantState = (plant, property) => {
 };
 
 //making function more abstract
-const changeState = (state, prop) => {
+const changeState = (state, prop, value) => {
   return {
     ...state,
-    [prop]: (state[prop] || 0) + 1
+    [prop]: (state[prop] || 0) + value
   }
 };
