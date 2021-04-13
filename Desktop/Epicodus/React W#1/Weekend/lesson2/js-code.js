@@ -26,3 +26,14 @@ const changeState = (state, prop, value) => {
     [prop]: (state[prop] || 0) + value
   }
 };
+
+// curry the function above
+
+const changeStateC = (prop) => {
+  return (value) => {
+    return (state) => ({
+      ...state,
+      [prop]: (state[prop] || 0) + value
+    })
+  }
+}
